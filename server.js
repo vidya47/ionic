@@ -44,7 +44,7 @@ mongoose.connection.on('open', function() {
     next();
 });
 
-  app.listen(3000, function(err) {
+  app.listen(process.env.PORT || 3000, function(err) {
     console.log('Server is running!')
   });
 });
