@@ -18,7 +18,7 @@ mongoose.connection.on('open', function() {
   app.use(passport.session());
   app.use(bodyParser.urlencoded({extended: false}));
   app.use(bodyParser.json());
-  var originsWhitelist = [
+  /*var originsWhitelist = [
   'http://localhost:8100',      //this is my front-end url for development
   ];
   var corsOptions = {
@@ -29,7 +29,7 @@ mongoose.connection.on('open', function() {
     credentials:true
   }
   //here is the magic
-  app.use(cors(corsOptions));
+  app.use(cors(corsOptions)); */
 
   app.use(routes);
   require('./config/passport')(passport);
